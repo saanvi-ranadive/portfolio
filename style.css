@@ -110,6 +110,7 @@ body {
 
     a.download {
       color: var(--color-accent);
+      display: block;
       text-align: center;
     }
 
