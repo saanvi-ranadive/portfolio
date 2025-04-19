@@ -8,10 +8,8 @@ html {
 
 body {
     font: 100%/1.5 system-ui;
-    color: oklch(80% 3% 200);
     max-width: 100ch;
     margin-inline: max(1em, (100% - 100ch) / 2);
-    background-color: oklch(0.42 0.0083 269);
 
     h1 {
       font-size: 4em;
@@ -48,11 +46,12 @@ body {
   }
 
   nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 2em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: var(--border-color);
 
     ul {
       display: contents;
@@ -76,12 +75,13 @@ body {
       border-bottom-color: var(--color-accent);
       padding-bottom: 0.3em;
       color:var(--color-accent);
+      background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
     }
 
     a.current {
       border-bottom-width: 0.4em;
       border-bottom-style: solid;
-      border-bottom-color: oklch(80% 3% 200);
+      border-bottom-color: var(--border-color);
       padding-bottom: 0.3em;
     }
   }
@@ -105,7 +105,7 @@ body {
 
   .resume {
     a {
-      color: oklch(80% 3% 200);
+      color: var(--color-accent);
     }
 
     a.download {
@@ -118,7 +118,7 @@ body {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: oklch(0.42 0.0083 269);
+      background-color: Canvas;
       text-align: center;
       padding: 10px 0;
       width: 100%;
@@ -143,7 +143,7 @@ body {
     textarea,
     button {
       font: inherit;
-      background-color: oklch(80% 3% 200);
+      background-color: var(--border-color);
     }
 
     form {
@@ -152,4 +152,12 @@ body {
       grid-column: 1 / -1;
       gap: 1em;
     }
+  }
+
+  label.color-scheme {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    font-size: 80%;
+    font-family: inherit;
   }
