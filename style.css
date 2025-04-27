@@ -161,3 +161,31 @@ body {
     font-size: 80%;
     font-family: inherit;
   }
+  #profile-stats {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 100%;
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+  
+  #profile-stats dt {
+    grid-row: 1;
+    color: var(--color-accent);
+  }
+  
+  #profile-stats dd {
+    font-size: 2rem;
+    font-weight: bold;
+    grid-row: 2;
+    margin: 0;
+  }
