@@ -101,6 +101,14 @@ body {
       grid-template-rows: subgrid;
       grid-row: span 3;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px; /* optional styling */
+      object-fit: contain; /* or 'cover' depending on what you want */
+    }
   }
 
   .resume {
