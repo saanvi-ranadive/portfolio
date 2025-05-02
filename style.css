@@ -284,3 +284,29 @@ body {
     padding: 0 12px;  
     box-sizing: border-box;
   }
+
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+
+  .selected {
+    --color: oklch(60% 45% 0) !important;
+  
+    &:is(path) {
+      fill: var(--color);
+    }
+  }
+
+  path.selected {
+    stroke: black;
+    stroke-width: 3px;
+    opacity: 1 !important;
+    filter: brightness(1.2); /* optional highlight */
+  }
