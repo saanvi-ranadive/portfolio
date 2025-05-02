@@ -11,16 +11,6 @@ if (projects) {
 } 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 
-// let rolledData = d3.rollups(
-//   projects,
-//   (v) => v.length,
-//   (d) => d.year,
-// );
-
-// let data = rolledData.map(([year, count]) => {
-//   return { value: count, label: year};
-// });
-
 let colors = d3.scaleOrdinal([
   '#603196', // purple
   '#e69629', // orange
@@ -31,22 +21,6 @@ let colors = d3.scaleOrdinal([
   '#17becf', // teal
   '#bcbd22', // olive
 ]);
-// let sliceGenerator = d3.pie().value((d) => d.value);
-// let arcData = sliceGenerator(data);
-// let arcs = arcData.map((d) => arcGenerator(d));
-// arcs.forEach((arc, idx) => {
-//   // TODO, fill in step for appending path to svg using D3
-//   d3.select('svg').append('path').attr('d', arc).attr('fill', colors(idx))
-// });
-
-// let legend = d3.select('.legend');
-// data.forEach((d, idx) => {
-//   legend
-//     .append('li')
-//     .attr('class', 'legend-item')
-//     .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-//     .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
-// });
 
 let query = '';
 let searchInput = document.querySelector('.searchBar');
@@ -82,9 +56,6 @@ function renderPieChart(projectsGiven) {
   let newArcData = newSliceGenerator(newData);
   let newArcs = newArcData.map((d) => arcGenerator(d));
 
-  // d3.select('svg').selectAll('path').remove();
-  // d3.select('.legend').selectAll('li').remove();
-
   newArcs.forEach((arc, idx) => {
     newSVG
       .append('path')
@@ -99,7 +70,7 @@ function renderPieChart(projectsGiven) {
             renderProjects(projects, projectsContainer, 'h2');
           } else {
             const selectedYear = newData[selectedIndex].label;
-            const filteredByYear = projects.filter(p => p.year === selectedYear);
+            const filteredByYear = projects.filter(p => p.year === selectedYear); // filters from all projects, not selected projects from search query
             renderProjects(filteredByYear, projectsContainer, 'h2');
           }
       });
