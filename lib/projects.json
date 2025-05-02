@@ -2,73 +2,73 @@
     {
         "title": "Compound Correlation Heatmap",
         "year": "2025",
-        "image": "/images/heatmap.png",
+        "image": "../images/heatmap.png",
         "description": "Developed an interactive heatmap using Plotly Go to visualize drug correlations, allowing users to toggle between Pearson, Spearman, and Kendall coefficients for customized analysis. Working on Molecular Cell Tumor Board Drug DB for UCSD's Mesirov Lab."
     },
     {
         "title": "MCTB-Drug DB Download Feature",
         "year": "2025",
-        "image": "/images/zip.png",
+        "image": "../images/zip.png",
         "description": "Implemented a secure file download feature using ZIP compression and access controls, enhancing user experience and protecting sensitive health data. Working on Molecular Cell Tumor Board Drug DB for UCSD's Mesirov Lab."
     },
     {
         "title": "Environmental Sustainability Web App",
         "year": "2024",
-        "image": "/images/sustainability.png",
+        "image": "../images/sustainability.png",
         "description": "Collaborated with a team of 5+ engineers in an agile environment to develop a sustainability-focused lifestyle app, promoting eco-friendly practices. Built and styled responsive web pages using HTML and CSS, incorporating Flexbox and Grid for layout management and ensuring cross-browser compatibility."
     },
     {
         "title": "Alzheimer’s Diagnosis Detection",
         "year": "2024",
-        "image": "/images/brain.png",
+        "image": "../images/brain.png",
         "description": "Constructed interactive visualizations using Matplotlib and Seaborn, highlighting key trends across 5+ demographic and health-related features. Employed random forest classification to rank the relative importance of features, identifying the top predictors of disease risk with a feature importance score threshold of 0.1."
     },
     {
         "title": "Turtle Graphics Translator",
         "year": "2023",
-        "image": "/images/turtle.png",
+        "image": "../images/turtle.png",
         "description": "Designed and built a custom turtle robot that translates Python’s turtle graphics into physical drawings in real time. Engineered the robot using a Raspberry Pi, servo motors, and a pen, reducing material costs by 20% compared to similar manual robotics projects."
     },
     {
         "title": "Recipe Preparation Time Predictor",
         "year": "2025",
-        "image": "/images/recipes.png",
+        "image": "../images/recipes.png",
         "description": "Developed a machine learning model to predict recipe preparation time based on nutritional features, including calories, fat, and sugar content. Explored and evaluated multiple regression algorithms—Linear Regression, Random Forest, Gradient Boosting, and K-Nearest Neighbors (KNN). After model tuning and performance comparison, the KNN Regressor achieved the best results, with the lowest RMSE and highest R² score, indicating strong predictive accuracy."
     },
     {
         "title": "San Diego Bus Route Optimizer",
         "year": "2025",
-        "image": "/images/bus.png",
+        "image": "../images/bus.png",
         "description": "Built an interactive visualization of San Diego MTS bus routes and implemented a Breadth-First Search algorithm to compute the shortest path between two stops. Modeled bus arrival patterns using a Poisson process to simulate realistic waiting times and explored the implications of the Waiting Time Paradox on commuter experience."
     },
     {
         "title": "Loan Application Investigation",
         "year": "2025",
-        "image": "/images/loans.png",
+        "image": "../images/loans.png",
         "description": "Analyzed LendingClub loan application data to uncover patterns in lender decision-making and evaluate borrower financial profiles through disposable income calculations. Identified and interpreted instances of Simpson’s Paradox, highlighting the importance of subgroup analysis in financial data."
     },
     {
         "title": "N-Gram Language Models",
         "year": "2025",
-        "image": "/images/n_grams.png",
+        "image": "../images/n_grams.png",
         "description": "Scraped text data from Project Gutenberg and performed corpus tokenization to build multiple language models. Implemented a baseline model, uniform model, unigram model, and N-gram model, applying the chain rule of probability to generate and evaluate text predictions."
     },
     {
         "title": "Meteorites Hypothesis Testing",
         "year": "2023",
-        "image": "/images/meteorites.png",
+        "image": "../images/meteorites.png",
         "description": "Performed statistical hypothesis testing and permutation tests to analyze the geographic distribution of meteorite landings and examine patterns in meteorite mass. Used inferential statistics to draw conclusions about spatial and mass-related trends in global meteorite data."
     },
     {
         "title": "Taylor Swift Song Recommender",
         "year": "2023",
-        "image": "/images/taylor.png",
+        "image": "../images/taylor.png",
         "description": "Built a data-driven song recommender system using lyrics from Taylor Swift’s discography. Performed TF-IDF analysis to extract key lyrical themes and applied sentiment analysis to capture emotional tone. Implemented a recommendation algorithm using Euclidean distance to suggest songs with similar sentiment and lyrical content."
     },
     {
         "title": "Pneumonia Lung Detection System",
         "year": "2021",
-        "image": "/images/lungs.png",
+        "image": "../images/lungs.png",
         "description": "Designed and implemented a machine learning pipeline for pneumonia detection using chest X-rays, achieving 90% accuracy on test data. Leveraged scikit-learn for training and evaluating models, NumPy for preprocessing over 10,000 images, and Matplotlib for creating 15+ visualizations of performance metrics."
     }
 ]

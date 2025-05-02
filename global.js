@@ -80,9 +80,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   containerElement.innerHTML = '';
 
   projects.forEach(project => {
-    const imagePath = project.image.startsWith('http') 
-      ? project.image 
-      : BASE_PATH + project.image.replace(/^\.\//, '').replace(/^\.\.\//, '');
       
     const article = document.createElement('article');
     article.innerHTML = `
