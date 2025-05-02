@@ -1,5 +1,6 @@
 :root {
   --color-accent: oklch(0.69 0.1924 293.16);
+  --border-color: oklch(50% 10% 200 / 40%);
 }
 
 html {
@@ -15,7 +16,6 @@ body {
       font-size: 4em;
       line-height: 1.1;
       text-wrap: balance;
-      color: var(--color-accent);
     }
     
     h2 {
@@ -46,7 +46,6 @@ body {
   }
 
   nav {
-    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 2em;
     border-bottom-width: 1px;
@@ -93,21 +92,46 @@ body {
 
   .projects {
     display: grid;
-    grid-template-columns:repeat(auto-fill, minmax(15em, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    align-items: stretch;
 
     article {
       display: grid;
       grid-template-rows: subgrid;
       grid-row: span 3;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-top: 20px;
     }
 
     img {
       max-width: 100%;
-      height: auto;
+      height: 150px;
       display: block;
-      border-radius: 8px; /* optional styling */
-      object-fit: contain; /* or 'cover' depending on what you want */
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .project-header {
+      margin-bottom: 12px;
+    }
+
+    .project-content {
+      flex-grow: 1;
+      margin-top: 12px;
+    }
+    
+    .project-footer {
+      margin-top: 12px;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -196,4 +220,67 @@ body {
     font-weight: bold;
     grid-row: 2;
     margin: 0;
+  }
+
+  #projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+  }
+
+  .legend {
+    list-style: none;
+    padding: 1em;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 1em;
+    font-family: system-ui, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    flex: 1;
+  }
+  
+  .legend li em {
+    font-style: normal;
+    color: #666;
+    font-size: 0.9em;
+  }
+  .legend .swatch {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    background-color: var(--color);
+    vertical-align: middle;
+  }
+
+  .legend .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+  }
+
+  .year-badge {
+    display: inline-block;
+    background-color: var(--border-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+
+  .searchBar {
+    width: 100%;
+    height: 48px;
+    font-size: 18px;
+    padding: 0 12px;  
+    box-sizing: border-box;
   }

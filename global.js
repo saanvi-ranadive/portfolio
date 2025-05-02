@@ -76,39 +76,22 @@ export async function fetchJSON(url) {
   }
 }
 
-// export function renderProjects(project, containerElement) {
-//   // Your code will go here
-//   containerElement.innerHTML = '';
-//   const article = document.createElement('article');
-//   article.innerHTML = `
-//     <h3>${project.title}</h3>
-//     <img src="${project.image}" alt="${project.title}">
-//     <p>${project.description}</p>
-//   `;
-//   containerElement.appendChild(article);
-// }
-
-// export function renderProjects(project, containerElement, headingLevel = 'h2') {
-//   // write javascript that will allow dynamic heading levels based on previous function
-//   containerElement.innerHTML = '';
-//   const article = document.createElement('article');
-//   article.innerHTML = `
-//     <h3>${project.title}</h3>
-//     <img src="${project.image}" alt="${project.title}">
-//     <p>${project.description}</p>
-//   `;
-//   containerElement.appendChild(article);
-// }
-
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
 
   projects.forEach(project => {
     const article = document.createElement('article');
     article.innerHTML = `
+      <div class="project-header">
       <${headingLevel}>${project.title}</${headingLevel}>
+      </div>
+      <div class="project-content">
       <img src="${project.image}" alt="${project.title}">
       <p>${project.description}</p>
+      </div>
+      <div class="project-footer">
+      <span class="year-badge">${project.year}</span>
+      </div>
     `;
     containerElement.appendChild(article);
   });
