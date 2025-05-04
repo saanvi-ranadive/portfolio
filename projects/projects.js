@@ -24,13 +24,14 @@ let colors = d3.scaleOrdinal([
 
 let query = '';
 let searchInput = document.querySelector('.searchBar');
-searchInput.addEventListener('change', (event) => {
-  query = event.target.value;
+
+searchInput.addEventListener('input', (event) => {
   let filteredProjects = projects.filter((project) => {
     let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(query.toLowerCase());
+    return values.includes(event.target.value.toLowerCase());
   });
   renderProjects(filteredProjects, projectsContainer, 'h2');
+  renderPieChart(filteredProjects);
 });
 
 let selectedIndex = -1;
@@ -88,12 +89,3 @@ function renderPieChart(projectsGiven) {
 }
 
 renderPieChart(projects);
-
-searchInput.addEventListener('input', (event) => {
-  let filteredProjects = projects.filter((project) => {
-    let values = Object.values(project).join('\n').toLowerCase();
-    return values.includes(event.target.value.toLowerCase());
-  });
-  renderProjects(filteredProjects, projectsContainer, 'h2');
-  renderPieChart(filteredProjects);
-});
