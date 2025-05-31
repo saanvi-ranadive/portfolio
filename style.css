@@ -390,6 +390,10 @@ body {
     transform-origin: center;
     transform-box: fill-box;
     fill-opacity: 0.6;
+
+    @starting-style {
+      r: 0;
+    }
   }
   
   circle:hover {
@@ -398,7 +402,6 @@ body {
   }
 
   dl.info {
-    /* ... other styles ... */
     transition-duration: 500ms;
     transition-property: opacity, visibility;
   }
@@ -418,4 +421,126 @@ body {
 
   circle.selected {
     fill: #ff6b6b;
+  }
+
+  .commit-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .commit-slider-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+  
+  .commit-time {
+    align-self: flex-end;
+  }
+
+  #commit-progress {
+    width: 100%;
+  }
+
+  #files {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  
+    > div {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+    }
+  
+    dt {
+      grid-column: 1;
+    }
+  
+    dd {
+      grid-column: 2;
+    }
+
+    .loc {
+      display: flex;
+      width: 0.5em;
+      aspect-ratio: 1;
+      background: var(--color);
+      border-radius: 50%;
+    }
+  
+    dd {
+      grid-column: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      align-content: start;
+      gap: 0.15em;
+      padding-top: 0.6em;
+      margin-left: 0;
+    }
+
+    dt small {
+      display: block;
+      font-size: 0.75em;
+      opacity: 0.6;
+    }
+  }
+
+  #scrolly-1 {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+  
+    > * {
+      flex: 1;
+    }
+  }
+  
+  #scatter-story {
+    position: relative;
+  }
+  
+  #scatter-plot {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    height: 50vh;
+  }
+
+  #scatter-story .step {
+    margin-bottom: 2rem; /* Add space between story steps */
+    padding: 1.5rem; /* Add internal spacing */
+    line-height: 1.6; /* Improve readability */
+    font-size: 1.1rem; /* Slightly larger text */
+    /* background-color: #f8f9fa; Light background for each step */
+    border-radius: 8px; /* Rounded corners */
+    border-left: 4px solid steelblue; /* Blue accent border */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Optional: Highlight active step */
+  #scatter-story .step:hover {
+    background-color: grey;
+    transform: translateX(5px);
+  }
+  
+  #chart {
+    width: 100%;
+    max-width: 1400px; 
+    height: 800px; 
+    margin: 2rem auto; 
+  }
+  
+  #scrolly-1 {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  #scatter-story {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
